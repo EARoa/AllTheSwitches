@@ -20,10 +20,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-sJ-l5r">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dyS-sJ-l5r">
                                 <rect key="frame" x="115" y="57" width="370" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JQo-70-xYb"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should Begin Editing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-7A-S9d">
                                 <rect key="frame" x="35" y="138" width="285" height="21"/>
@@ -117,6 +120,14 @@
                             <constraint firstItem="5uF-YN-za8" firstAttribute="trailing" secondItem="KRa-RB-0QI" secondAttribute="trailing" id="yr3-3D-fO7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beginEditing" destination="06b-6B-rQ8" id="EIl-1R-yi0"/>
+                        <outlet property="characterRange" destination="IDX-Dv-iOQ" id="6dX-Wq-Nl7"/>
+                        <outlet property="endEditing" destination="YP0-eN-34K" id="nrg-lD-64C"/>
+                        <outlet property="shouldClear" destination="fx7-RZ-Qlu" id="9WD-kg-y7q"/>
+                        <outlet property="shouldReturn" destination="j1o-J4-iRS" id="bkh-Uw-e6x"/>
+                        <outlet property="textField" destination="dyS-sJ-l5r" id="vlP-DN-z1n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
